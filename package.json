@@ -4,7 +4,7 @@
   "description": "\"learning node js\"",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./final_app/server.js",
     "dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
