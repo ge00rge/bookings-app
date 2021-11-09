@@ -8,7 +8,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
-
+//With the compression package, that text will then be dramatically compressed.
+const compression = require('compression');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
@@ -120,6 +121,8 @@ app.use(
     ],
   })
 );
+// middleware that compresses all the data sent to clients.
+app.use(compression());
 
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
