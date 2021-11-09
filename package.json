@@ -4,10 +4,11 @@
   "description": "\"learning node js\"",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
-    "watch:js": "parcel watch --no-hmr ./final_app/public/js/index.js --out-dir ./final_app/public/js --out-file bundle.js --public-url ./",
+    "watch:js": "parcel watch --no-hmr ./135_image_upload_users_using_web/public/js/index.js --out-dir ./135_image_upload_users_using_web/public/js --out-file bundle.js --public-url ./",
     "build:js": "parcel build ./final_app/public/js/index.js --out-dir ./final_app/public/js --out-file bundle.js --public-url ./"
   },
   "repository": {
