@@ -1,0 +1,8 @@
+ In stripe --> webhooks:
+
+ we're gonna specify a URL here to which Stripe will automatically send 
+ a POST request to whenever a checkout session has successfully completed
+ (whenever a payment was successful)
+ 
+ With that POST request, Stripe will then send back the original session 
+ data that we created in the first step when we created that checkout session.
