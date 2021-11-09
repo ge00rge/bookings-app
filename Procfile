@@ -1,1 +1,1 @@
-web: node final_app/server.js
+web: node /final_app/server.js
