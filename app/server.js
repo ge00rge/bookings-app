@@ -17,6 +17,17 @@ const app = require('./app');
 
 const db = process.env.DATABASE_LOCAL;
 
+const started = new Date();
+console.info(`Connecting to Mongoose:     ${started.toLocaleTimeString()}`);
+
+const tm = function (startTime, failVal) {
+  const end = new Date() - startTime;
+  const fail = end <= failVal ? 'pass' : 'fail';
+  return `${new Date().toLocaleTimeString()}: ${end
+    .toString()
+    .padStart(5, ' ')} ms : ${fail}`;
+};
+
 mongoose
   .connect(db, {
     useNewUrlParse: true,
@@ -24,7 +35,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log('DB connection successful!!');
+    console.log('DB connection successful!!', tm(started, 20000));
   });
 
 const port = process.env.PORT || 3000;
