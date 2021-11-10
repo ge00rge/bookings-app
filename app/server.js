@@ -35,6 +35,8 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
     family: 4,
+    user: process.env.DATABASE_USER,
+    pass: process.env.DATABASE_PASSWORD,
   })
   .then(() => {
     console.log('DB connection successful!!', tm(started, 20000));
