@@ -30,9 +30,11 @@ const tm = function (startTime, failVal) {
 
 mongoose
   .connect(db, {
-    useNewUrlParse: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
+    family: 4,
   })
   .then(() => {
     console.log('DB connection successful!!', tm(started, 20000));
