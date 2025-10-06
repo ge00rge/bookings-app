@@ -4,6 +4,8 @@ Built with NodeJs, Express, Mongo, JS, HTML and CSS.
 
 MVC architecture.
 
+Created entire auth process from scratch.
+
 Applied best security practices.
 
 Added Stripe as payment method.
